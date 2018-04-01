@@ -8,7 +8,7 @@
 >本次操作系统实验的平台为Ubuntu 16.04 (LTS) ，实验内核为linux-4.15.14
 
 
-###主要系统工具：
+### 主要系统工具：
 需要的操作大致有编译内核、创建磁盘镜像及根目录、使用 gdb 远程调试等，使用如下工具：
  
 - **QEMU emulator**  2.5.0
@@ -73,7 +73,7 @@ c                                  #运行系统以测试
 
 
 ----------
-
+![source](https://github.com/uniqueufo/OSH_test/blob/master/1.png)
 ----------
 ### 内核启动流程
 
@@ -81,7 +81,7 @@ c                                  #运行系统以测试
 >&emsp;&emsp;系统是从BIOS加电自检，载入MBR中的引导程序(LILO/GRUB),再加载linux内核开始运行的，一直到指定shell开始运行告一段落，这时用户开始操作Linux。而大致是在vmlinux的入口startup_32(head.S)中为pid号为0的原始进程设置了执行环境，然后原始进程开始执行start_kernel()完成Linux内核的初始化工作。
 
 
-#####在/arch/x86/boot/header.S汇编文件中(start_of_kernel)：
+##### 在/arch/x86/boot/header.S汇编文件中(start_of_kernel)：
 
 
 - 复位硬盘控制器
@@ -96,7 +96,7 @@ c                                  #运行系统以测试
 >calll   main
 
 
-#####在 arch/x86/boot/main.c 中：
+##### 在 arch/x86/boot/main.c 中：
 
 
 - 程序首先将 header 拷贝到内核参数块,并初始化了堆：static void copy_boot_params(void)
@@ -146,7 +146,7 @@ asmlinkage __visible void __init i386_start_kernel(void)
 }
 
 ```
-#####在/linux-4.15.14/init/main.c 中 
+##### 在/linux-4.15.14/init/main.c 中 
 
 start_kernel()中调用了一系列初始化函数，以完成kernel本身的设置。
 - 设置与体系结构相关的环境
@@ -168,7 +168,7 @@ start_kernel()中调用了一系列初始化函数，以完成kernel本身的设
 - 创建内存文件描述符表
 
 
-#####启动init过程
+##### 启动init过程
 
 - 总线初始化
 - 网络初始化

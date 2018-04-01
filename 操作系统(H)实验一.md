@@ -20,7 +20,8 @@
 ### 实验环境搭建：
 
 **编译内核代码**
-从https://www.kernel.org/ 下载linux内核源码到本地,并解压编译
+
+从 https://www.kernel.org/ 下载linux内核源码到本地,并解压编译
 ```bash
 xz -d ***.tar.xz                    #解压
 tar -xvf ***.tar

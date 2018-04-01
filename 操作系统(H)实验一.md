@@ -1,5 +1,7 @@
 # &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;操作系统(H)实验一
 ###&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——追踪linux内核启动过程中的事件
+
+
 -------------------
 
 
@@ -17,8 +19,8 @@
 ----------------------
 ### 实验环境搭建：
 
-####编译内核代码
-从https://www.kernel.org/下载linux内核源码到本地,并解压编译
+**编译内核代码**
+从https://www.kernel.org/ 下载linux内核源码到本地,并解压编译
 ```bash
 xz -d ***.tar.xz                    #解压
 tar -xvf ***.tar
@@ -26,7 +28,7 @@ make x86_64_defconfig               #使用当前x86_64平台默认的配置
 make -j8 bzImage                    #编译源码，此处使用“-j8"参数以加快编译速度
 make modules                        #编译在配置阶段选择的内核模块
 ```
-####制作磁盘镜像
+**制作磁盘镜像**
 >linux内核启动时必须已有根文件系统来供内核加载，同时也用于存放编译好的内核模块
 
 **使用qemu-img 创建一个2G的磁盘镜像文件**
@@ -40,6 +42,7 @@ sudo make modules_install INSTALL_MODPATH=./rootfs #安装内核模块到磁盘�
 
 
 **准备init程序**
+
 为了完整启动内核到用户态，需要准备一个1号进程(init进程)供内核启动
 这里选用busybox作为init程序以及其他命令工具的提供方
 下载busybox源码准备编译，这里使用busybox 1.28.2的最新版本

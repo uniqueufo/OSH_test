@@ -167,6 +167,9 @@ start_kernel()中调用了一系列初始化函数，以完成kernel本身的设
 - 初始化内存inode表
 - 创建内存文件描述符表
 
+**在start_kernel函数执行的最后一个函数调用rest_init（）时，Linux系统开始有了一个进程，此进程pid为0**
+
+
 
 ##### 启动init过程
 

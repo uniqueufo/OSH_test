@@ -1,5 +1,5 @@
-# &emsp;&emsp;&emsp;&emsp;&emsp;&emsp;操作系统(H)实验一
-###&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;——追踪linux内核启动过程中的事件
+#操作系统(H)实验一
+###——追踪linux内核启动过程中的事件
 
 
 -------------------

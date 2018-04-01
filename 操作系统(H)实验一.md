@@ -73,7 +73,7 @@ c                                  #运行系统以测试
 
 
 **启动完成后如下，内核启动完毕**
-![Alt text](./1.png)
+![Alt text](https://github.com/uniqueufo/OSH_test/blob/master/1.png)
 
 ----------
 ###内核代码
